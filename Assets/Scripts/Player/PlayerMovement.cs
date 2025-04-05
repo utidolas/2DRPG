@@ -23,7 +23,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
+        ReadMovement();
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+    private void Move()
+    {
+        rb2D.MovePosition(rb2D.position + moveDirection * (PlayerSpeed * Time.fixedDeltaTime)); // moving & fixing FPS
+    }
+
+    private void ReadMovement()
+    {
+        moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized; // get dir & normalizing vector lengh 
     }
 
     private void OnEnable()
