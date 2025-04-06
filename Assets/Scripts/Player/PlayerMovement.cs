@@ -5,9 +5,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Config")]
     [SerializeField] private float PlayerSpeed;
 
-    // Creating hash to animator X and Y
+    // Creating hash to moving animations
     private readonly int moveX = Animator.StringToHash("MoveX");
     private readonly int moveY = Animator.StringToHash("MoveY");
+    private readonly int moving = Animator.StringToHash("Moving");
 
     private Vector2 moveDirection;
 
@@ -46,8 +47,14 @@ public class PlayerMovement : MonoBehaviour
     private void ReadMovement()
     {
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized; // get dir & normalizing vector lengh
-        if (moveDirection == Vector2.zero) return;
+        if (moveDirection == Vector2.zero) 
+        {
+            animator.SetBool(moving, false);
+            return;
+        }
+
         // animation horizontal and vertical
+        animator.SetBool(moving, true);
         animator.SetFloat(moveX, moveDirection.x);
         animator.SetFloat(moveY, moveDirection.y);
     }
