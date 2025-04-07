@@ -3,11 +3,12 @@ using UnityEngine.EventSystems;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    // Creating hash to moving animations
+    // Creating hash to player animations
     private readonly int moveX = Animator.StringToHash("MoveX");
     private readonly int moveY = Animator.StringToHash("MoveY");
     private readonly int moving = Animator.StringToHash("Moving");
     private readonly int dead = Animator.StringToHash("IsDead");
+    private readonly int revive = Animator.StringToHash("Revive");
 
     private Animator animator;
 
@@ -30,5 +31,11 @@ public class PlayerAnimations : MonoBehaviour
     {
         animator.SetFloat(moveX, dir.x);
         animator.SetFloat(moveY, dir.y);
+    }
+
+    public void ResetPlayerAnimation()
+    {
+        SetMoveAnimation(Vector2.down); // Face down
+        animator.SetTrigger(revive); // Dead anim to idle
     }
 }
