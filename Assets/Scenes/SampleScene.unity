@@ -340,6 +340,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &622926202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5939748374988023466, guid: aae60470706967342bbfbabe717fe25c, type: 3}
+  m_PrefabInstance: {fileID: 4471575866915041804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &622926208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622926202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92afbf187535b084c8c98e4dbe50f4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 8ea89a76cfa83b84a890c4b9b2d6341e, type: 2}
+--- !u!114 &622926209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622926202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feff8d31b0ac7344f8d5cce1d04f4c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &622926210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622926202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feff8d31b0ac7344f8d5cce1d04f4c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4471575866915041804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -395,7 +437,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5939748374988023466, guid: aae60470706967342bbfbabe717fe25c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622926208}
+    - targetCorrespondingSourceObject: {fileID: 5939748374988023466, guid: aae60470706967342bbfbabe717fe25c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622926210}
+    - targetCorrespondingSourceObject: {fileID: 5939748374988023466, guid: aae60470706967342bbfbabe717fe25c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622926209}
   m_SourcePrefab: {fileID: 100100000, guid: aae60470706967342bbfbabe717fe25c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

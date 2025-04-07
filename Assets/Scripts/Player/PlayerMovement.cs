@@ -5,14 +5,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Config")]
     [SerializeField] private float PlayerSpeed;
 
-    // Creating hash to moving animations
-    private readonly int moveX = Animator.StringToHash("MoveX");
-    private readonly int moveY = Animator.StringToHash("MoveY");
-    private readonly int moving = Animator.StringToHash("Moving");
+    private PlayerAnimations playerAnimations; // reference of script "PlayerAnimations.cs"
+    private Player player; // reference of script "Player.cs"
 
     private Vector2 moveDirection;
 
-    private Animator animator;
     private PlayerActions actions;
     private Rigidbody2D rb2D;
 
@@ -21,7 +18,8 @@ public class PlayerMovement : MonoBehaviour
     {
         actions = new PlayerActions(); // new instance of action class
         rb2D = GetComponent<Rigidbody2D>(); // reference of component attached to player obj
-        animator = GetComponent<Animator>(); // reference of component attached to player obj
+        playerAnimations = GetComponent<PlayerAnimations>(); // reference of script "PlayerAnimations.cs"
+        player = GetComponent<Player>();
     }
 
     void Start()
@@ -41,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (player.Stats.Health <= 0f) return;
         rb2D.MovePosition(rb2D.position + moveDirection * (PlayerSpeed * Time.fixedDeltaTime)); // moving & fixing FPS
     }
 
@@ -49,14 +48,13 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized; // get dir & normalizing vector lengh
         if (moveDirection == Vector2.zero) 
         {
-            animator.SetBool(moving, false);
+            playerAnimations.SetMovingAnimation(false);
             return;
         }
 
         // animation horizontal and vertical
-        animator.SetBool(moving, true);
-        animator.SetFloat(moveX, moveDirection.x);
-        animator.SetFloat(moveY, moveDirection.y);
+        playerAnimations.SetMovingAnimation(true);
+        playerAnimations.SetMoveAnimation(moveDirection);
     }
 
     private void OnEnable()
