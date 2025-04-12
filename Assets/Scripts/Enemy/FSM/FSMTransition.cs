@@ -3,7 +3,7 @@ using System;
 
 
 [Serializable]
-public class FMSTransition
+public class FSMTransition
 {
     public FSMDecision Decision; // ex.: PlayerInRangeOfAttack *returns* True or False
     public string TrueState; // transition from: CurrentState -> AttackState (TrueState)
