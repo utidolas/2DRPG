@@ -13,7 +13,7 @@ public class EnemyBrain : MonoBehaviour
 
     private void Update()
     {
-        // '?' is the same as: if ( CurrentState == null ) return;
+        // '?' is the same as having : if ( CurrentState == null ) return;
         CurrentState?.UpdateState(this);
     }
 
