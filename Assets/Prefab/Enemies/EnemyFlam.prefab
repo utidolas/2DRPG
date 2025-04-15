@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9016214045273042134}
   - component: {fileID: 9071954822017249698}
   - component: {fileID: 1629471318544309116}
+  - component: {fileID: 2157015040681224439}
   m_Layer: 6
   m_Name: EnemyFlam
   m_TagString: Enemy
@@ -194,7 +195,16 @@ MonoBehaviour:
   - ID: Wander
     Actions:
     - {fileID: 1629471318544309116}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 2157015040681224439}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 2157015040681224439}
+      TrueState: 
+      FalseState: Wander
 --- !u!114 &1629471318544309116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +220,19 @@ MonoBehaviour:
   speed: 1.5
   wanderTime: 1
   moveRange: {x: 2, y: 2}
+--- !u!114 &2157015040681224439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468665746965773024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4df1b3fa7660c44866d84a2138bf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128

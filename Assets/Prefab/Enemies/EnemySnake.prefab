@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 3907546505587057070}
   - component: {fileID: 3297470207399340174}
   - component: {fileID: 3783317108888585586}
+  - component: {fileID: 3868022276109883177}
   - component: {fileID: 7405432092613230219}
-  - component: {fileID: 8290348973368781024}
+  - component: {fileID: 4159257404554230038}
+  - component: {fileID: 5001125275671817706}
   m_Layer: 6
   m_Name: EnemySnake
   m_TagString: Enemy
@@ -177,6 +179,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3868022276109883177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225764994078165970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64c2d73f01019d4497fbd57820a8c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -2.8255367, y: 2.2571933, z: 0}
+  - {x: -2.365631, y: -4.218631, z: 0}
+  - {x: 2.9276543, y: -0.3312838, z: 0}
+  - {x: 4.9421654, y: -4.4153433, z: 0}
 --- !u!114 &7405432092613230219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,13 +208,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb8138c3c05fa54bbafe75cc50cf19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
-    - {fileID: 8290348973368781024}
-    Transitions: []
---- !u!114 &8290348973368781024
+    - {fileID: 4159257404554230038}
+    Transitions:
+    - Decision: {fileID: 5001125275671817706}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 5001125275671817706}
+      TrueState: 
+      FalseState: Patrol
+--- !u!114 &4159257404554230038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,9 +232,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 225764994078165970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f4563e273708f4b9316983a8174cfc, type: 3}
+  m_Script: {fileID: 11500000, guid: c9e85b3062d583f4ea1a7fe874cd7a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
+--- !u!114 &5001125275671817706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225764994078165970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4df1b3fa7660c44866d84a2138bf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
