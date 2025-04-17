@@ -31,6 +31,7 @@ public class DecisionDetectPlayer : FSMDecision
         return false;
     }
 
+    // drawing range of detection
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
