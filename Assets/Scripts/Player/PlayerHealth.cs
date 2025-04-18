@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     [SerializeField] private PlayerStats stats;
 
     private PlayerAnimations playerAnimations; // reference of script "PlayerAnimations.cs"
+    public bool PlayerHasHealth = true;
 
     private void Awake()
     {
@@ -26,9 +27,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         stats.Health -= amount;
 
         // checking if player is alive
-        if (stats.Health <= 0f)
+        if (stats.Health <= 0.0001f)
         {
             PlayerDead();
+            PlayerHasHealth = false;
         }
     }
 
