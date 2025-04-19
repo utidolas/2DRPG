@@ -15,7 +15,10 @@ GameObject:
   - component: {fileID: 9016214045273042134}
   - component: {fileID: 9071954822017249698}
   - component: {fileID: 1629471318544309116}
+  - component: {fileID: 5024434429036544293}
   - component: {fileID: 2157015040681224439}
+  - component: {fileID: 1019271945124143075}
+  - component: {fileID: 2020558610141406100}
   m_Layer: 6
   m_Name: EnemyFlam
   m_TagString: Enemy
@@ -200,11 +203,22 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 5024434429036544293}
     Transitions:
     - Decision: {fileID: 2157015040681224439}
       TrueState: 
       FalseState: Wander
+    - Decision: {fileID: 1019271945124143075}
+      TrueState: Attack
+      FalseState: 
+  - ID: Attack
+    Actions:
+    - {fileID: 2020558610141406100}
+    Transitions:
+    - Decision: {fileID: 1019271945124143075}
+      TrueState: 
+      FalseState: Chase
 --- !u!114 &1629471318544309116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +234,19 @@ MonoBehaviour:
   speed: 1.5
   wanderTime: 1
   moveRange: {x: 2, y: 2}
+--- !u!114 &5024434429036544293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468665746965773024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561a6171377b9f34eaf3ca816c983ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1.8
 --- !u!114 &2157015040681224439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,3 +263,33 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1019271945124143075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468665746965773024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5cab15768227c49a6366e474c64aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.8
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &2020558610141406100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468665746965773024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c356614474e92c049949e202d54cdd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  timeBtwAttacks: 1

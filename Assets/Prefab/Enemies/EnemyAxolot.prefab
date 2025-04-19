@@ -16,6 +16,10 @@ GameObject:
   - component: {fileID: 7590642351950930398}
   - component: {fileID: 7465406526987791904}
   - component: {fileID: 3942155939212948329}
+  - component: {fileID: 2776464241279566542}
+  - component: {fileID: 8893287631545649290}
+  - component: {fileID: 7666752339004470353}
+  - component: {fileID: 8278811658903538329}
   m_Layer: 6
   m_Name: EnemyAxolot
   m_TagString: Enemy
@@ -213,7 +217,27 @@ MonoBehaviour:
   - ID: Patrol
     Actions:
     - {fileID: 3942155939212948329}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 8893287631545649290}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions:
+    - {fileID: 2776464241279566542}
+    Transitions:
+    - Decision: {fileID: 8893287631545649290}
+      TrueState: 
+      FalseState: Patrol
+    - Decision: {fileID: 7666752339004470353}
+      TrueState: Attack
+      FalseState: 
+  - ID: Attack
+    Actions:
+    - {fileID: 8278811658903538329}
+    Transitions:
+    - Decision: {fileID: 7666752339004470353}
+      TrueState: 
+      FalseState: Patrol
 --- !u!114 &3942155939212948329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +251,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+--- !u!114 &2776464241279566542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351553366870231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561a6171377b9f34eaf3ca816c983ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1.8
+--- !u!114 &8893287631545649290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351553366870231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4df1b3fa7660c44866d84a2138bf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &7666752339004470353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351553366870231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5cab15768227c49a6366e474c64aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.8
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &8278811658903538329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351553366870231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c356614474e92c049949e202d54cdd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  timeBtwAttacks: 1

@@ -15,6 +15,10 @@ GameObject:
   - component: {fileID: 7720215596432574957}
   - component: {fileID: 6034337620557714050}
   - component: {fileID: 7930271199291139360}
+  - component: {fileID: 2503745097110696169}
+  - component: {fileID: 776318222500006710}
+  - component: {fileID: 3896924769898965437}
+  - component: {fileID: 5226808640673871832}
   m_Layer: 6
   m_Name: EnemyCyclope
   m_TagString: Enemy
@@ -194,7 +198,27 @@ MonoBehaviour:
   - ID: Wander
     Actions:
     - {fileID: 7930271199291139360}
-    Transitions: []
+    Transitions:
+    - Decision: {fileID: 776318222500006710}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions:
+    - {fileID: 2503745097110696169}
+    Transitions:
+    - Decision: {fileID: 776318222500006710}
+      TrueState: 
+      FalseState: Wander
+    - Decision: {fileID: 3896924769898965437}
+      TrueState: Attack
+      FalseState: 
+  - ID: Attack
+    Actions:
+    - {fileID: 5226808640673871832}
+    Transitions:
+    - Decision: {fileID: 3896924769898965437}
+      TrueState: 
+      FalseState: Chase
 --- !u!114 &7930271199291139360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +234,62 @@ MonoBehaviour:
   speed: 1.5
   wanderTime: 1
   moveRange: {x: 2, y: 2}
+--- !u!114 &2503745097110696169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479299868051649249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561a6171377b9f34eaf3ca816c983ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1.8
+--- !u!114 &776318222500006710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479299868051649249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4df1b3fa7660c44866d84a2138bf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &3896924769898965437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479299868051649249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5cab15768227c49a6366e474c64aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.8
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &5226808640673871832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479299868051649249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c356614474e92c049949e202d54cdd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 35
+  timeBtwAttacks: 1

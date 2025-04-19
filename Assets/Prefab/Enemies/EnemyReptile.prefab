@@ -13,8 +13,13 @@ GameObject:
   - component: {fileID: 6695351067319016299}
   - component: {fileID: 4316877975660033864}
   - component: {fileID: 304971185604106546}
+  - component: {fileID: 6478382085280970336}
   - component: {fileID: 3748368659146121821}
-  - component: {fileID: 5815646931932231487}
+  - component: {fileID: 6869005080096616849}
+  - component: {fileID: 7508275636835005881}
+  - component: {fileID: 182668876454120985}
+  - component: {fileID: 7699732500307438069}
+  - component: {fileID: 5139832197635323219}
   m_Layer: 6
   m_Name: EnemyReptile
   m_TagString: Enemy
@@ -177,6 +182,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6478382085280970336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520006024734117133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64c2d73f01019d4497fbd57820a8c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -2.307335, y: -3.1304464, z: 0}
+  - {x: 4.0599136, y: -2.8419268, z: 0}
+  - {x: 3.9611244, y: 2.2401886, z: 0}
+  - {x: -1.4222488, y: 3.6370125, z: 0}
+  - {x: 0.79911804, y: -0.33418941, z: 0}
 --- !u!114 &3748368659146121821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,13 +212,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb8138c3c05fa54bbafe75cc50cf19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initState: Wander
+  initState: Patrol
   states:
-  - ID: Wander
+  - ID: Patrol
     Actions:
-    - {fileID: 5815646931932231487}
-    Transitions: []
---- !u!114 &5815646931932231487
+    - {fileID: 6869005080096616849}
+    Transitions:
+    - Decision: {fileID: 182668876454120985}
+      TrueState: Chase
+      FalseState: 
+  - ID: Chase
+    Actions:
+    - {fileID: 7508275636835005881}
+    Transitions:
+    - Decision: {fileID: 182668876454120985}
+      TrueState: 
+      FalseState: Patrol
+    - Decision: {fileID: 7699732500307438069}
+      TrueState: Attack
+      FalseState: 
+  - ID: Attack
+    Actions:
+    - {fileID: 5139832197635323219}
+    Transitions:
+    - Decision: {fileID: 7699732500307438069}
+      TrueState: 
+      FalseState: Chase
+--- !u!114 &6869005080096616849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,9 +247,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 3520006024734117133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f4563e273708f4b9316983a8174cfc, type: 3}
+  m_Script: {fileID: 11500000, guid: c9e85b3062d583f4ea1a7fe874cd7a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  wanderTime: 1
-  moveRange: {x: 2, y: 2}
+--- !u!114 &7508275636835005881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520006024734117133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561a6171377b9f34eaf3ca816c983ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1.8
+--- !u!114 &182668876454120985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520006024734117133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4df1b3fa7660c44866d84a2138bf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &7699732500307438069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520006024734117133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5cab15768227c49a6366e474c64aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.8
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &5139832197635323219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520006024734117133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c356614474e92c049949e202d54cdd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 30
+  timeBtwAttacks: 1

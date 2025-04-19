@@ -16,7 +16,10 @@ GameObject:
   - component: {fileID: 3868022276109883177}
   - component: {fileID: 7405432092613230219}
   - component: {fileID: 4159257404554230038}
+  - component: {fileID: 6140121978340850299}
   - component: {fileID: 5001125275671817706}
+  - component: {fileID: 1630261150517631385}
+  - component: {fileID: 1885226340716911234}
   m_Layer: 6
   m_Name: EnemySnake
   m_TagString: Enemy
@@ -218,11 +221,22 @@ MonoBehaviour:
       TrueState: Chase
       FalseState: 
   - ID: Chase
-    Actions: []
+    Actions:
+    - {fileID: 6140121978340850299}
     Transitions:
     - Decision: {fileID: 5001125275671817706}
       TrueState: 
       FalseState: Patrol
+    - Decision: {fileID: 1630261150517631385}
+      TrueState: Attack
+      FalseState: 
+  - ID: Attack
+    Actions:
+    - {fileID: 1885226340716911234}
+    Transitions:
+    - Decision: {fileID: 1630261150517631385}
+      TrueState: 
+      FalseState: Chase
 --- !u!114 &4159257404554230038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +250,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+--- !u!114 &6140121978340850299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225764994078165970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561a6171377b9f34eaf3ca816c983ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1.8
 --- !u!114 &5001125275671817706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,3 +279,33 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1630261150517631385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225764994078165970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5cab15768227c49a6366e474c64aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.8
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &1885226340716911234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225764994078165970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c356614474e92c049949e202d54cdd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  timeBtwAttacks: 1
