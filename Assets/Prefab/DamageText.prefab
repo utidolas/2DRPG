@@ -57,7 +57,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1609476901
   m_SortingOrder: 0
@@ -112,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3165486438950687222}
   - component: {fileID: 5856156195869515099}
+  - component: {fileID: 8717584615018243230}
   m_Layer: 0
   m_Name: DamageText
   m_TagString: Untagged
@@ -157,6 +158,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8717584615018243230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6029744861116075134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e06fd6f15ef60d41aa9f6b8a16aae0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTMP: {fileID: 8305853334983796662}
 --- !u!1 &8280032844248316409
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,8 +270,8 @@ MonoBehaviour:
   m_fontSizeMin: 0.5
   m_fontSizeMax: 1
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

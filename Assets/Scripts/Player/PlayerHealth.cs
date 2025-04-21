@@ -16,15 +16,18 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)){
-            TakeDamage(15f);
+        if (stats.Health <= 0f){
+            PlayerDead();
         }
     }
 
     public void TakeDamage(float amount)
     {
+        if (stats.Health <= 0f) return;
+
         // taking damage
         stats.Health -= amount;
+        DamageManager.Instance.ShowDamageText(amount, transform);
 
         // checking if player is alive
         if (stats.Health <= 0.0001f)
