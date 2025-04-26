@@ -18,7 +18,8 @@ public class DamageManager : MonoBehaviour
     {
         DamageText text = Instantiate(damageTextPrefab, parent);
         Debug.Log($"damage: {damageAmount}");
-        //text.transform.position += Vector3.right * 0.5f;
+        text.transform.position = parent.position;
+        text.transform.position += Vector3.right * 0.5f;
         text.SetDamageText(damageAmount);
     }
 
