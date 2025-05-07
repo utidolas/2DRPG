@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5142385095046203542}
   - component: {fileID: 539657168069991904}
   - component: {fileID: 7449118596853271335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjectileEnergyBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

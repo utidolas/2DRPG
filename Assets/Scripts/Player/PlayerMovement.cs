@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Config")]
     [SerializeField] private float PlayerSpeed;
 
+    public Vector2 MoveDirection => moveDirection; //prop
+
     private PlayerAnimations playerAnimations; // reference of script "PlayerAnimations.cs"
     private Player player; // reference of script "Player.cs"
 

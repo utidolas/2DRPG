@@ -60867,6 +60867,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ead5d84ee6e56478e790488e73a3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialWeapon: {fileID: 11400000, guid: cbe44a2cac9492b4d8f3e97eb83b8090, type: 2}
+  attackPositions:
+  - {fileID: 463916769}
+  - {fileID: 1934558494}
+  - {fileID: 66601028}
+  - {fileID: 2031848312}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
