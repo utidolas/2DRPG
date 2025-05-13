@@ -6,7 +6,13 @@ public class PlayerAttack : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField] private Weapon initialWeapon;
-    [SerializeField] private Transform[] attackPositions;
+    [SerializeField] private Transform[] attackPositions; // array to check where attack will instantiate
+
+    [Header("Melee Config")]
+    [SerializeField] private ParticleSystem slashFX;
+    [SerializeField] private float minDistanceMeleeAttack;
+
+    public Weapon CurrentWeapon { get; set; }
 
     private PlayerActions actions;
     private PlayerAnimations playerAnimations;
@@ -30,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
+        CurrentWeapon = initialWeapon;
         actions.Attack.ClickAttack.performed += ctx => Attack();
     }
 
@@ -52,19 +59,44 @@ public class PlayerAttack : MonoBehaviour
 
     private IEnumerator IEAttack()
     {
-        if(currentAttackPosition != null)
+        if (currentAttackPosition == null) yield break;
+
+        // check whether weapon is melee or magic and attack
+        if(CurrentWeapon.WeaponType == WeaponType.Magic)
         {
-            if (playerMana.CurrentMana < initialWeapon.RequiredMana) yield break; // check if has mana
-            Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, currentAttackRotation)); // rotating proj
-            Projectile projectile = Instantiate(initialWeapon.ProjectilePrefab, currentAttackPosition.position, rotation);
-            projectile.Direction = Vector3.up; // moving the proj
-            projectile.Damage = initialWeapon.Damage;
-            playerMana.UseMana(initialWeapon.RequiredMana); // consume mana
+            if (playerMana.CurrentMana < CurrentWeapon.RequiredMana) yield break; // check if has mana
+            MagicAttack();
         }
+        else
+        {
+            MeleeAttack();
+        }
+
+
 
         playerAnimations.SetAttackAnimation(true);
         yield return new WaitForSeconds(0.5f);
         playerAnimations.SetAttackAnimation(false);
+    }
+
+    private void MagicAttack()
+    {
+        Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, currentAttackRotation)); // rotating proj
+        Projectile projectile = Instantiate(CurrentWeapon.ProjectilePrefab, currentAttackPosition.position, rotation);
+        projectile.Direction = Vector3.up; // moving the proj
+        projectile.Damage = CurrentWeapon.Damage;
+        playerMana.UseMana(CurrentWeapon.RequiredMana); // consume mana
+    }
+
+    private void MeleeAttack() 
+    {
+        slashFX.transform.position = currentAttackPosition.position;
+        slashFX.Play();
+        float currentDistanceToEnemy = Vector3.Distance(enemyTarget.transform.position, transform.position);
+        if(currentDistanceToEnemy <= minDistanceMeleeAttack)
+        {
+            enemyTarget.GetComponent<IDamageable>().TakeDamage(1f);
+        }
     }
 
     private void GetFirePosition()
@@ -112,6 +144,7 @@ public class PlayerAttack : MonoBehaviour
         actions.Enable();
         SelectionManager.OnEnemySelectedEvent += EnemySelectedCallback;
         SelectionManager.OnNoSelectionEvent += NoEnemySelectionCallback;
+        EnemyHealth.OnEnemyDeadEvent += NoEnemySelectionCallback;
     }
 
     private void OnDisable()
@@ -119,5 +152,6 @@ public class PlayerAttack : MonoBehaviour
         actions.Disable();
         SelectionManager.OnEnemySelectedEvent -= EnemySelectedCallback;
         SelectionManager.OnNoSelectionEvent -= NoEnemySelectionCallback;
+        EnemyHealth.OnEnemyDeadEvent -= NoEnemySelectionCallback;
     }
 }
