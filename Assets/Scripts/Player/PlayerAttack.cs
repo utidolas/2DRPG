@@ -5,10 +5,12 @@ using NUnit.Framework.Constraints;
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Config")]
+    [SerializeField] private PlayerStats stats;
     [SerializeField] private Weapon initialWeapon;
     [SerializeField] private Transform[] attackPositions; // array to check where attack will instantiate
 
     [Header("Melee Config")]
+
     [SerializeField] private ParticleSystem slashFX;
     [SerializeField] private float minDistanceMeleeAttack;
 
@@ -84,7 +86,7 @@ public class PlayerAttack : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, currentAttackRotation)); // rotating proj
         Projectile projectile = Instantiate(CurrentWeapon.ProjectilePrefab, currentAttackPosition.position, rotation);
         projectile.Direction = Vector3.up; // moving the proj
-        projectile.Damage = CurrentWeapon.Damage;
+        projectile.Damage = GetAttackDamage();
         playerMana.UseMana(CurrentWeapon.RequiredMana); // consume mana
     }
 
@@ -95,8 +97,22 @@ public class PlayerAttack : MonoBehaviour
         float currentDistanceToEnemy = Vector3.Distance(enemyTarget.transform.position, transform.position);
         if(currentDistanceToEnemy <= minDistanceMeleeAttack)
         {
-            enemyTarget.GetComponent<IDamageable>().TakeDamage(1f);
+            enemyTarget.GetComponent<IDamageable>().TakeDamage(GetAttackDamage());
         }
+    }
+
+    private float GetAttackDamage()
+    {
+        float damage = stats.BaseDamage;
+        damage += CurrentWeapon.Damage;
+        // computing critical chance and applying it
+        float randomPerc = Random.Range(0f, 100);
+        if(randomPerc <= stats.CriticalChance)
+        {
+            damage += damage * (stats.CriticalDamage / 100f);
+        }
+
+        return damage;
     }
 
     private void GetFirePosition()
