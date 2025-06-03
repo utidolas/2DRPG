@@ -2,7 +2,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // create new instance using singleton
+    public static GameManager Instance;
+
     [SerializeField] private Player player; // reference to script "Player.cs"
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Update()
     {
@@ -10,5 +18,11 @@ public class GameManager : MonoBehaviour
         { 
             player.ResetPlayer();
         }
+    }
+
+    public void AddPlayerExp(float expAmount)
+    {
+        PlayerExp playerExp = player.GetComponent<PlayerExp>();
+        playerExp.AddExp(expAmount);
     }
 }

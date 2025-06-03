@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 3896924769898965437}
   - component: {fileID: 5226808640673871832}
   - component: {fileID: 6805739414160810814}
+  - component: {fileID: 1996396127306436129}
+  - component: {fileID: 5287047359518643892}
   m_Layer: 6
   m_Name: EnemyCyclope
   m_TagString: Enemy
@@ -395,3 +397,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorSprite: {fileID: 1959756983925492842}
+--- !u!114 &1996396127306436129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479299868051649249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4091800644bae499f8f7785f236429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &5287047359518643892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479299868051649249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35277ea7583c2394597bf6d8aaa09387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

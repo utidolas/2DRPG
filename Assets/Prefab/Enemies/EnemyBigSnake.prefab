@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 4842767311597770091}
   - component: {fileID: 8406274420674179928}
   - component: {fileID: 5196174161020194903}
+  - component: {fileID: 7066651667624414249}
+  - component: {fileID: 2897803011356492982}
   m_Layer: 6
   m_Name: EnemyBigSnake
   m_TagString: Enemy
@@ -395,3 +397,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorSprite: {fileID: 915836823876475034}
+--- !u!114 &7066651667624414249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628398487327993541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4091800644bae499f8f7785f236429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &2897803011356492982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628398487327993541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35277ea7583c2394597bf6d8aaa09387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

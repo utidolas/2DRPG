@@ -7,6 +7,7 @@ public class PlayerExp : MonoBehaviour
 
     public void AddExp(float amount)
     {
+        stats.TotalExp += amount;
         stats.CurrentExp += amount;
         // check if level up, reset exp and update it
         while (stats.CurrentExp >= stats.NextLevelExp)

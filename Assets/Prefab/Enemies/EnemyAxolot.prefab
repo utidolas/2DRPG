@@ -108,6 +108,8 @@ GameObject:
   - component: {fileID: 7666752339004470353}
   - component: {fileID: 8278811658903538329}
   - component: {fileID: 6812654328863779044}
+  - component: {fileID: 4109654375256643696}
+  - component: {fileID: 5634886789285789185}
   m_Layer: 6
   m_Name: EnemyAxolot
   m_TagString: Enemy
@@ -412,3 +414,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectorSprite: {fileID: 190406286688656727}
+--- !u!114 &4109654375256643696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351553366870231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4091800644bae499f8f7785f236429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &5634886789285789185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351553366870231961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35277ea7583c2394597bf6d8aaa09387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
