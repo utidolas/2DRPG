@@ -4919,7 +4919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -55.9, y: -0.000000733}
+  m_AnchoredPosition: {x: -55.899994, y: -0.000000733}
   m_SizeDelta: {x: 81.61, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &116290676
@@ -5055,7 +5055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -55.9, y: -0.000000733}
+  m_AnchoredPosition: {x: -55.899994, y: -0.000000733}
   m_SizeDelta: {x: 81.61, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &122767394
@@ -6550,13 +6550,13 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -3
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -6578,7 +6578,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 9.494675, y: 0, z: 6.4563713, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7420,13 +7420,13 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -3
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -7448,7 +7448,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 15.595985, y: 0, z: 10.518218, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9575,7 +9575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -55.9, y: -0.000000733}
+  m_AnchoredPosition: {x: -55.899994, y: -0.000000733}
   m_SizeDelta: {x: 81.61, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &755129237
@@ -66329,7 +66329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 667, y: 78}
   m_SizeDelta: {x: 500, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628944698
@@ -67175,6 +67175,10 @@ MonoBehaviour:
   statTotalExpTMP: {fileID: 767786128}
   statCurrentExpTMP: {fileID: 1182120687}
   statRequiredExpTMP: {fileID: 1722376111}
+  attributePointsTMP: {fileID: 1538403916}
+  strengthTMP: {fileID: 122767394}
+  dexterityTMP: {fileID: 755129237}
+  intelligenceTMP: {fileID: 116290676}
 --- !u!1001 &1703339461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69560,7 +69564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
       propertyPath: expDrop
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8483752753398769328, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69672,7 +69676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4991050435204267298, guid: b5b0a5b67df717f44aad373f71f0f3cd, type: 3}
       propertyPath: expDrop
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8784285697454194901, guid: b5b0a5b67df717f44aad373f71f0f3cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69769,7 +69773,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5634886789285789185, guid: 2474873b121e0064ba9450e8d22ebee1, type: 3}
       propertyPath: expDrop
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7351553366870231961, guid: 2474873b121e0064ba9450e8d22ebee1, type: 3}
       propertyPath: m_Name
@@ -69891,7 +69895,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
       propertyPath: expDrop
-      value: 80
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 975829697343418315, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
       propertyPath: m_Name
@@ -70409,7 +70413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
       propertyPath: expDrop
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3520006024734117133, guid: 5815c004048dd5b4490b249406241edc, type: 3}
       propertyPath: m_Name
@@ -70529,7 +70533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
       propertyPath: expDrop
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70737,6 +70741,7 @@ GameObject:
   - component: {fileID: 3725148028074254883}
   - component: {fileID: 2286042329583459110}
   - component: {fileID: 8437251359723887110}
+  - component: {fileID: 8437251359723887111}
   m_Layer: 7
   m_Name: PlayerNinja
   m_TagString: Untagged
@@ -70798,7 +70803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
       propertyPath: expDrop
-      value: 80
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -70828,7 +70833,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4659153447346038424, guid: ae715e2e7003c464bbe4f8f1a936075d, type: 3}
       propertyPath: expDrop
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5573037134396083002, guid: ae715e2e7003c464bbe4f8f1a936075d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70913,6 +70918,38 @@ MonoBehaviour:
   - {fileID: 2031848312}
   slashFX: {fileID: 1076948092}
   minDistanceMeleeAttack: 2
+--- !u!114 &8437251359723887111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809245200436647078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc89560e1b0ac04e9a31c8dbf045fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 8ea89a76cfa83b84a890c4b9b2d6341e, type: 2}
+  settings:
+  - Name: Strength
+    DamageUpgrade: 2
+    HealthUpgrade: 1
+    ManaUpgrade: 1
+    CChanceUpgrade: 0.2
+    CDamageUpgrade: 1
+  - Name: Dexterity
+    DamageUpgrade: 1
+    HealthUpgrade: 2
+    ManaUpgrade: 2
+    CChanceUpgrade: 0.5
+    CDamageUpgrade: 0.5
+  - Name: Intelligence
+    DamageUpgrade: 1
+    HealthUpgrade: 1
+    ManaUpgrade: 5
+    CChanceUpgrade: 1
+    CDamageUpgrade: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

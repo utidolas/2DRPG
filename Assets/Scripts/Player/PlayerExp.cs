@@ -13,7 +13,7 @@ public class PlayerExp : MonoBehaviour
         while (stats.CurrentExp >= stats.NextLevelExp)
         {
             stats.CurrentExp -= stats.NextLevelExp;
-            UpdateExp();
+            NextLevel();
         }
     }
     private void Update()
@@ -24,9 +24,10 @@ public class PlayerExp : MonoBehaviour
         }
     }
 
-    private void UpdateExp()
+    private void NextLevel()
     {
         stats.Level++;
+        stats.AttributePoints++;
         float currentExpRequired = stats.NextLevelExp;
         float newNextLevelExp = Mathf.Round(currentExpRequired + stats.NextLevelExp * (stats.ExpMultipliyer / 100f)); // sum current level + a percentage 
         stats.NextLevelExp = newNextLevelExp;
