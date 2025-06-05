@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Player player; // reference to script "Player.cs"
 
+    public Player Player => player; // prop to use 'player' variable
+
     private void Awake()
     {
         Instance = this;

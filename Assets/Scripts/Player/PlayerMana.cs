@@ -26,6 +26,18 @@ public class PlayerMana : MonoBehaviour
         CurrentMana = stats.Mana;
     }
 
+    public void RecoverMana(float amount)
+    {
+        stats.Mana += amount;
+        stats.Mana = Mathf.Min(stats.Mana, stats.MaxMana); // making sure the mana dont go beyond maxmana by getting the minimun value between mana and Max Mana
+    }
+
+    public bool CanRecoverMana()
+    {
+        return stats.Mana > 0 && stats.Mana < stats.MaxMana;
+ 
+    }
+
     public void ResetMana()
     {
         CurrentMana = stats.MaxMana;

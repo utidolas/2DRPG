@@ -37,6 +37,22 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
+    public void RestoreHealth(float amount)
+    {
+        stats.Health += amount;
+        // making sure dont go beyond Max Health
+        if(stats.Health > stats.MaxHealth)
+        {
+            stats.Health = stats.MaxHealth;
+        }
+    }
+
+    // check if health is not max and if player's not dead
+    public bool CanRestoreHealth()
+    {
+        return stats.Health > 0 && stats.Health < stats.MaxHealth;
+    }
+
     private void PlayerDead()
     {
         playerAnimations.SetDeadAnimation();
