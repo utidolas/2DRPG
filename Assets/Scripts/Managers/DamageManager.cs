@@ -1,17 +1,10 @@
 using UnityEngine;
 
-public class DamageManager : MonoBehaviour
+public class DamageManager : Singleton<DamageManager>
 {
-    // creating Singleton to access public methods/vars
-    public static DamageManager Instance;
 
     [Header("Config")]
     [SerializeField] private DamageText damageTextPrefab;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     // create instance of prefab in scene 
     public void ShowDamageText(float damageAmount, Transform parent) 

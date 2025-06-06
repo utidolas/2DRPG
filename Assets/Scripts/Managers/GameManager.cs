@@ -1,18 +1,12 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    // create new instance using singleton
-    public static GameManager Instance;
 
     [SerializeField] private Player player; // reference to script "Player.cs"
 
     public Player Player => player; // prop to use 'player' variable
 
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     private void Update()
     {
