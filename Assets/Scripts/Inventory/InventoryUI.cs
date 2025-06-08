@@ -5,6 +5,8 @@ using UnityEngine;
 public class InventoryUI : Singleton<InventoryUI>
 {
     [Header("Config")]
+
+    [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private InventorySlot slotPrefab;
     [SerializeField] private Transform container;
 
@@ -30,5 +32,10 @@ public class InventoryUI : Singleton<InventoryUI>
         InventorySlot slot = slotList[index];
         slot.ShowSlotInformation(true);
         slot.UpdateSlot(item);
+    }
+
+    public void OpenCloseInventory()
+    {
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);    
     }
 }
