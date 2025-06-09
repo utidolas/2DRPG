@@ -10,10 +10,13 @@ public class InventoryUI : Singleton<InventoryUI>
     [SerializeField] private InventorySlot slotPrefab;
     [SerializeField] private Transform container;
 
+    public InventorySlot CurrentSlot { get; set; }
+
     private List<InventorySlot> slotList = new List<InventorySlot>();
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         InitInventory();
     }
 
@@ -27,9 +30,21 @@ public class InventoryUI : Singleton<InventoryUI>
         }
     }
 
+    public void UseItem()
+    {
+        Inventory.Instance.UseItem(CurrentSlot.Index);
+    }
+
     public void DrawItem(InventoryItem item, int index)
     {
         InventorySlot slot = slotList[index];
+        if(item == null)
+        {
+            slot.ShowSlotInformation(false);
+            return;
+        }
+
+
         slot.ShowSlotInformation(true);
         slot.UpdateSlot(item);
     }
@@ -37,5 +52,20 @@ public class InventoryUI : Singleton<InventoryUI>
     public void OpenCloseInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);    
+    }
+
+    private void SlotSelectedCallback(int slotIndex)
+    {
+        CurrentSlot = slotList[slotIndex];
+    }
+
+    private void OnEnable()
+    {
+        InventorySlot.OnSlotSelectedEvent += SlotSelectedCallback;
+    }
+
+    private void OnDisable()
+    {
+        InventorySlot.OnSlotSelectedEvent -= SlotSelectedCallback;
     }
 }

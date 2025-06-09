@@ -16,13 +16,14 @@ public class Inventory : Singleton<Inventory>
     public void Start()
     {
         inventoryItems = new InventoryItem[inventorySize];
+        VerifyItemsForDraw();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            AddItem(testItem, 9);
+            AddItem(testItem, 3);
         }
     }
 
@@ -61,6 +62,15 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
+    public void UseItem(int index)
+    {
+        if (inventoryItems[index] == null) return; // if we don't have item, return.
+        if (inventoryItems[index].UseItem()) // use item
+        {
+            DecreaseItemStack(index); // decrease item stack
+        }
+    }
+
     // add to free slot
     private void AddItemFreeSlot(InventoryItem item, int quantity)
     {
@@ -71,6 +81,21 @@ public class Inventory : Singleton<Inventory>
             inventoryItems[i].Quantity = quantity;
             InventoryUI.Instance.DrawItem(inventoryItems[i], i);
             return;
+        }
+    }
+
+    private void DecreaseItemStack(int index)
+    {
+        inventoryItems[index].Quantity--;
+        if (inventoryItems[index].Quantity <= 0)
+        {
+            inventoryItems[index] = null;
+            InventoryUI.Instance.DrawItem(null, index); // hide slot info
+
+        }
+        else
+        {
+            InventoryUI.Instance.DrawItem(inventoryItems[index], index); // update item
         }
     }
 
@@ -88,5 +113,17 @@ public class Inventory : Singleton<Inventory>
         }
 
         return itemIndexes;
+    }
+
+    // clear inventory images
+    private void VerifyItemsForDraw()
+    {
+        for (int i = 0; i < inventorySize; i++)
+        {
+            if (inventoryItems[i] == null) // check all inventory
+            {
+                InventoryUI.Instance.DrawItem(null, i);
+            }
+        }
     }
 }
