@@ -21,4 +21,4 @@ MonoBehaviour:
   IsStackable: 0
   MaxStack: 1
   Quantity: 0
-  weapon: {fileID: 11400000, guid: 92fbc9232b58aba458738b5fb221a6b5, type: 2}
+  Weapon: {fileID: 11400000, guid: 92fbc9232b58aba458738b5fb221a6b5, type: 2}

@@ -7,11 +7,6 @@ public class InventorySlot : MonoBehaviour
 {
     public static event Action<int> OnSlotSelectedEvent;
 
-    public void ClickSlot()
-    {
-        OnSlotSelectedEvent?.Invoke(Index);
-    }
-
     [Header("Config")]
     [SerializeField] private Image itemIcon;
     [SerializeField] private Image quantityContainer;
@@ -19,10 +14,16 @@ public class InventorySlot : MonoBehaviour
 
     public int Index { get; set; }
 
+    public void ClickSlot()
+    {
+        OnSlotSelectedEvent?.Invoke(Index);
+    }
+
     public void UpdateSlot(InventoryItem item)
     {
         itemIcon.sprite = item.Icon;
         itemQuantityTMP.text = item.Quantity.ToString();
+        itemIcon.SetNativeSize();
     }
 
     public void ShowSlotInformation(bool value)

@@ -12,12 +12,14 @@ public class Player : MonoBehaviour
     private PlayerAnimations animations; // reference of script "PlayerAnimations.cs"
     public PlayerMana PlayerMana { get; private set; } // prop of players mana
     public PlayerHealth PlayerHealth { get; private set; } // prop of players health
+    public PlayerAttack PlayerAttack { get; private set; } // prop of players attack
     public PlayerStats Stats => stats; // creating property to return private var
 
     private void Awake()
     {
         PlayerMana = GetComponent<PlayerMana>();
         PlayerHealth = GetComponent<PlayerHealth>();
+        PlayerAttack = GetComponent<PlayerAttack>(); 
         animations = GetComponent<PlayerAnimations>();
     }
 

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum ItemType
@@ -12,6 +14,7 @@ public enum ItemType
 [CreateAssetMenu(menuName = "Items/Item")]
 public class InventoryItem : ScriptableObject
 {
+    [Header("Config")]
     public string ID;
     public string Name;
     public Sprite Icon;

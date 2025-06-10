@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +14,7 @@ public class Inventory : Singleton<Inventory>
     public InventoryItem testItem;
 
     public int InventorySize => inventorySize; // prop to get inventorySize value
+    public InventoryItem[] InventoryItems => inventoryItems;
 
     public void Start()
     {
@@ -23,7 +26,7 @@ public class Inventory : Singleton<Inventory>
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            AddItem(testItem, 3);
+            AddItem(testItem, 1);
         }
     }
 
@@ -69,6 +72,21 @@ public class Inventory : Singleton<Inventory>
         {
             DecreaseItemStack(index); // decrease item stack
         }
+    }
+
+    public void RemoveItem(int index)
+    {
+        if (inventoryItems[index] == null) return;
+        inventoryItems[index].RemoveItem();
+        inventoryItems[index] = null;
+        InventoryUI.Instance.DrawItem(null, index);
+    }
+
+    public void EquipItem(int index)
+    {
+        if (inventoryItems[index] == null) return;
+        if (inventoryItems[index].ItemType != ItemType.Weapon) return;
+        inventoryItems[index].EquipItem();
     }
 
     // add to free slot
