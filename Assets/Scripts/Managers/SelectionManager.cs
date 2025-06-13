@@ -1,6 +1,7 @@
 using System;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SelectionManager : MonoBehaviour
 {
@@ -33,8 +34,15 @@ public class SelectionManager : MonoBehaviour
                 EnemyBrain enemy = hit.collider.GetComponent<EnemyBrain>();
                 if (enemy == null) return;
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-                if(enemyHealth.CurrentHealth <= 0f) return; // check if enemy is alive
-                OnEnemySelectedEvent?.Invoke(enemy);
+                if (enemyHealth.CurrentHealth <= 0f) // check if enemy is alive
+                {
+                    EnemyLoot enemyLoot = enemy.GetComponent<EnemyLoot>();
+                    LootManager.Instance.ShowLoot(enemyLoot);
+                }
+                else
+                {
+                    OnEnemySelectedEvent?.Invoke(enemy);
+                }
             }
             else
             {
