@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Noble
+  m_Controller: {fileID: 9100000, guid: c8556cad407a53d40a522581a784618d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6416f530a42dbc441b973d253000a298, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7c7a88a39013eef4c9f919c9b7d95a9c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 12a49b7c29934a04983dec9de0169acd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6a76d0fc38a518240a481c9df9d3bc4d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8310777a49a31bd4f8e5280798efcd7e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f696d6fb0ceefa64f96a18e452c26502, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fd48ce069153fb141960182d3d7f3ead, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 579944919f51c84439f995255c23535f, type: 2}

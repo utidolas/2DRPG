@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a310a29f0f2983469aa082631a1f8ca, type: 3}
+  m_Name: Dialogue_Monk
+  m_EditorClassIdentifier: 
+  Name: Monk
+  Icon: {fileID: 21300000, guid: 06eaeab3d897712428ce8a26b403a4a7, type: 3}
+  HasInteraction: 0
+  InteractionType: 0
+  Dialogue:
+  - "Hello, stran\u2014... or should I say, adventurer?"
+  - "This town isn\u2019t exactly known for its memorable adventures, though. Still,
+    it\u2019s a grea place to practice your skills."
+  - "Well, even if this area doesn't hold many dangers, you best be careful out there.
+    Monsters might not be the scariest thing you\u2019ll come across. Good luck."
