@@ -16,8 +16,8 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 06eaeab3d897712428ce8a26b403a4a7, type: 3}
   HasInteraction: 0
   InteractionType: 0
+  Greeting: "Hello, stran\u2014... or should I say, adventurer?"
   Dialogue:
-  - "Hello, stran\u2014... or should I say, adventurer?"
   - "This town isn\u2019t exactly known for its memorable adventures, though. Still,
     it\u2019s a grea place to practice your skills."
   - "Well, even if this area doesn't hold many dangers, you best be careful out there.
