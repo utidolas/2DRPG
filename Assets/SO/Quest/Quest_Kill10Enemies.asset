@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915e9713405a1c244948df220cd5e6d9, type: 3}
+  m_Name: Quest_Kill10Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemy Slayer
+  ID: Kill10Enemy
+  QuestGoal: 10
+  Description: Hunt and defeat 10 enemies.
+  GoldReward: 10
+  ExpReward: 30
+  ItemReward:
+    Item: {fileID: 11400000, guid: e40cf16719e538047838794a9c651103, type: 2}
+    Quantity: 10
+  CurrentStatus: 0
+  IsQuestCompleted: 0
+  QuestAccepted: 0

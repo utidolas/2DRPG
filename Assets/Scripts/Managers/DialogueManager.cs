@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
+    public static event Action<InteractionType> OnExtraInteractionEvent;
+
     [Header("Config")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private Image npcIcon;
@@ -72,6 +75,13 @@ public class DialogueManager : Singleton<DialogueManager>
         {
             CloseDialoguePanel();
             hasDialogueStarted = false;
+
+            // check if NPC has extra interaction
+            if(NPCSelected.DialogueToShow.HasInteraction)
+            {
+                OnExtraInteractionEvent?.Invoke(NPCSelected.DialogueToShow.InteractionType);
+            }
+
             return;
         }
 
