@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Enemy Slayer
   ID: Kill10Enemy
-  QuestGoal: 10
-  Description: Hunt and defeat 10 enemies.
+  QuestGoal: 3
+  Description: Hunt and defeat 3 enemies.
   GoldReward: 10
   ExpReward: 30
   ItemReward:

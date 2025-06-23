@@ -20,6 +20,33 @@ public class Quest : ScriptableObject
     [HideInInspector] public int CurrentStatus;
     [HideInInspector] public bool IsQuestCompleted;
     [HideInInspector] public bool QuestAccepted;
+
+    public void AddProgress(int amount)
+    {
+        CurrentStatus += amount;
+        if(CurrentStatus >= QuestGoal)
+        {
+            CurrentStatus = QuestGoal; // Ensure it doesn't exceed the goal
+            QuestIsCompleted();
+        }
+    }
+
+    public void QuestIsCompleted()
+    {
+        if (IsQuestCompleted)
+        {
+            return;
+        }
+
+        IsQuestCompleted = true;
+    }
+
+    public void ResetQuest()
+    {
+        QuestAccepted = false;
+        IsQuestCompleted = false;
+        CurrentStatus = 0;
+    }
 }
 
 [Serializable]

@@ -35,9 +35,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void TakeDamage(float amount)
     {
         CurrentHealth -= amount;
-        if(CurrentHealth <= 0f)
+        // Check if enemy is dead and add progress to quest
+        if (CurrentHealth <= 0f)
         {
             DisableEnemy();
+            QuestManager.Instance.AddProgress("Kill10Enemy", 1);
         }
         else
         {

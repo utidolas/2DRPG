@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Extra Panels")]
     [SerializeField] private GameObject npcQuestPanel;
+    [SerializeField] private GameObject playerQuestPanel;
 
     private void Update()
     {
@@ -53,6 +54,11 @@ public class UIManager : MonoBehaviour
     public void OpenCloseNPCQuestPanel(bool value)
     {
         npcQuestPanel.SetActive(value);
+    }
+
+    public void OpenClosePlayerQuestPanel(bool value)
+    {
+        playerQuestPanel.SetActive(value);
     }
 
     private void UpdatePlayerUI()
