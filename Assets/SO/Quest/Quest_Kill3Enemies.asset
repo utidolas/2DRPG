@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915e9713405a1c244948df220cd5e6d9, type: 3}
-  m_Name: Quest_Kill10Enemies
+  m_Name: Quest_Kill3Enemies
   m_EditorClassIdentifier: 
-  Name: Enemy Master
-  ID: Kill10Enemy
-  QuestGoal: 10
-  Description: Hunt and defeat 10 enemies.
-  GoldReward: 500
-  ExpReward: 400
+  Name: Enemy Slayer
+  ID: Kill3Enemy
+  QuestGoal: 3
+  Description: Hunt and defeat 3 enemies.
+  GoldReward: 10
+  ExpReward: 30
   ItemReward:
-    Item: {fileID: 11400000, guid: 6e6a04da34ecf57459a4efe834ed2e9b, type: 2}
-    Quantity: 1
+    Item: {fileID: 11400000, guid: e40cf16719e538047838794a9c651103, type: 2}
+    Quantity: 10
   CurrentStatus: 0
   IsQuestCompleted: 0
   QuestAccepted: 0

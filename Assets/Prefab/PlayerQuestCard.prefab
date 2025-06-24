@@ -584,6 +584,8 @@ MonoBehaviour:
   expRewardTMP: {fileID: 1016155355994266678}
   itemIcon: {fileID: 2186283902493579075}
   itemQuantityTMP: {fileID: 1018398656689647337}
+  claimButton: {fileID: 6239961738065938945}
+  rewardsPanel: {fileID: 6184248407880021960}
 --- !u!1 &4287482013823151763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4126608983659746587}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5411516792779676576}
+        m_TargetAssemblyTypeName: QuestCardPlayer, Assembly-CSharp
+        m_MethodName: ClaimQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6844927998844546953
 GameObject:
   m_ObjectHideFlags: 0

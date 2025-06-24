@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915e9713405a1c244948df220cd5e6d9, type: 3}
-  m_Name: Quest_Kill10Enemies
+  m_Name: Quest_Kill5Enemies
   m_EditorClassIdentifier: 
-  Name: Enemy Master
-  ID: Kill10Enemy
-  QuestGoal: 10
-  Description: Hunt and defeat 10 enemies.
-  GoldReward: 500
-  ExpReward: 400
+  Name: Enemy Destroyer
+  ID: Kill5Enemy
+  QuestGoal: 5
+  Description: Hunt and defeat 5 enemies.
+  GoldReward: 50
+  ExpReward: 100
   ItemReward:
-    Item: {fileID: 11400000, guid: 6e6a04da34ecf57459a4efe834ed2e9b, type: 2}
+    Item: {fileID: 11400000, guid: 5fc3c1baf06308a4c96117590ec3a954, type: 2}
     Quantity: 1
   CurrentStatus: 0
   IsQuestCompleted: 0

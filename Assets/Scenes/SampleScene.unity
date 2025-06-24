@@ -4859,6 +4859,7 @@ Transform:
   - {fileID: 87250067}
   - {fileID: 2111242139}
   - {fileID: 1016202968}
+  - {fileID: 1673025311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &66522413
@@ -61066,6 +61067,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests:
+  - {fileID: 11400000, guid: 953eaf6aec86d8a43b734b1fe6f1fe39, type: 2}
+  - {fileID: 11400000, guid: ab9cd4d1e5ff6af4fb0fb56d462e8ca0, type: 2}
   - {fileID: 11400000, guid: 2730674c823208748b7edf38da6d1fe1, type: 2}
   QuestCardNpcPrefab: {fileID: 375305386769061367, guid: 8223e564ffd3c884a9dc81d1b5cad032, type: 3}
   npcQuestPanelContainer: {fileID: 1435872314}
@@ -72604,6 +72607,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671487167}
   m_CullTransparentMesh: 1
+--- !u!1 &1673025310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673025311}
+  - component: {fileID: 1673025312}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1673025311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673025310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 63726950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673025312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673025310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6c3f3200ca9bb4692f5a5eeea8c5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1673837957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78704,7 +78751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 8ea89a76cfa83b84a890c4b9b2d6341e, type: 2}
-  initialWeapon: {fileID: 11400000, guid: 9ebd6d84659c0044686977295738763f, type: 2}
+  initialWeapon: {fileID: 11400000, guid: 8905675e9a09d4b4a8eb09f2814711ab, type: 2}
   attackPositions:
   - {fileID: 463916769}
   - {fileID: 1934558494}
