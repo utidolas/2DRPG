@@ -33,6 +33,20 @@ public class ShopCard : MonoBehaviour
         currentCost = shopItem.Cost;
     }
 
+    public void BuyItem()
+    {
+        if(CoinManager.Instance.Coins >= currentCost)
+        {
+            // If the player has enough coins, deduct the cost and add the item to the inventory
+            Inventory.Instance.AddItem(item.Item, quantity);
+            CoinManager.Instance.RemoveCoins(currentCost);
+
+            // Reset the quantity and cost after purchase
+            quantity = 1;
+            currentCost = initialCost;
+        }
+    }
+
     public void Add()
     {
         float buyCost = initialCost * (quantity + 1);

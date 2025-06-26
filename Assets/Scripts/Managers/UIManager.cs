@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthTMP;
     [SerializeField] private TextMeshProUGUI manaTMP;
     [SerializeField] private TextMeshProUGUI expTMP;
+    [SerializeField] private TextMeshProUGUI coinsTMP;
 
     [Header("Stats Panel")]
     [SerializeField] private GameObject statsPanel;
@@ -35,6 +36,7 @@ public class UIManager : MonoBehaviour
     [Header("Extra Panels")]
     [SerializeField] private GameObject npcQuestPanel;
     [SerializeField] private GameObject playerQuestPanel;
+    [SerializeField] private GameObject shopPanel;
 
     private void Update()
     {
@@ -61,6 +63,11 @@ public class UIManager : MonoBehaviour
         playerQuestPanel.SetActive(value);
     }
 
+    public void OpenCloseShopPanel(bool value)
+    {
+        shopPanel.SetActive(value);
+    }   
+
     private void UpdatePlayerUI()
     {
         // interpolate to update bar
@@ -73,6 +80,10 @@ public class UIManager : MonoBehaviour
         healthTMP.text = $"{stats.Health} / {stats.MaxHealth}";
         manaTMP.text = $"{stats.Mana} / {stats.MaxMana}";
         expTMP.text = $"{stats.CurrentExp} / {stats.NextLevelExp}";
+
+        // update coins text
+        coinsTMP.text = CoinManager.Instance.Coins.ToString();
+
     }
 
     // update stats panel
@@ -105,6 +116,7 @@ public class UIManager : MonoBehaviour
                 OpenCloseNPCQuestPanel(true);
                 break;
             case InteractionType.Shop:
+                OpenCloseShopPanel(true);
                 break;
         }
     }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a310a29f0f2983469aa082631a1f8ca, type: 3}
-  m_Name: NPC_CaveGirl
+  m_Name: Dialogue_CaveGirl
   m_EditorClassIdentifier: 
   Name: Dunga Bonesnap
   Icon: {fileID: 21300000, guid: 0d559138143951f4ea99e7f48c3fe606, type: 3}
