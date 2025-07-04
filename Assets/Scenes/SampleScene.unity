@@ -709,6 +709,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeCardPrefab: {fileID: 6936804484866354630, guid: 3b55780d24b86c843882bc3589842a86, type: 3}
   recipeContainer: {fileID: 845836765}
+  recipeName: {fileID: 475359477}
+  item1Icon: {fileID: 1040564064}
+  item1Name: {fileID: 291667672}
+  item1Amount: {fileID: 609862145}
+  item2Icon: {fileID: 54618426}
+  item2Name: {fileID: 568495513}
+  item2Amount: {fileID: 1547231184}
+  craftButton: {fileID: 1855527421}
+  finalItemIcon: {fileID: 1762418036}
+  finalItemName: {fileID: 1210249376}
+  finalItemDescription: {fileID: 1417043457}
   recipes: {fileID: 11400000, guid: 7cedea357f8537e47940da4c21309123, type: 2}
 --- !u!1 &31093651
 GameObject:
@@ -72062,8 +72073,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 48.6, y: -57.2}
-  m_SizeDelta: {x: 367.55, y: 45.49}
+  m_AnchoredPosition: {x: 48.6, y: -90.42}
+  m_SizeDelta: {x: 367.55, y: 12.27}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1417043457
 MonoBehaviour:

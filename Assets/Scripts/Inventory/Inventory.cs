@@ -39,7 +39,7 @@ public class Inventory : Singleton<Inventory>
     public void AddItem(InventoryItem item, int quantity)
     {
         if (item == null || quantity <= 0) return;
-        List<int> itemIndexes = CheckItemStock(item.ID);
+        List<int> itemIndexes = CheckItemStockIndexes(item.ID);
         if(item.IsStackable && itemIndexes.Count > 0) // if we have same item in inv
         {
             foreach(int index in itemIndexes)
@@ -129,7 +129,7 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
-    private List<int> CheckItemStock(string itemID)
+    private List<int> CheckItemStockIndexes(string itemID)
     {
         // check if have the same item in inv
         List<int> itemIndexes = new List<int>();
@@ -143,6 +143,24 @@ public class Inventory : Singleton<Inventory>
         }
 
         return itemIndexes;
+    }
+
+    // get currtent stock of item in inventory
+    public int GetItemStock(string itemID)
+    {
+        List<int> indexes = CheckItemStockIndexes(itemID);
+        int currentStock = 0;
+        // 
+        foreach (int index in indexes)
+        {
+            // if we have item in inventory, add quantity to currentStock
+            if (inventoryItems[index].ID == itemID)
+            {
+                currentStock += inventoryItems[index].Quantity;
+            }
+        }
+
+        return currentStock;
     }
 
     // clear inventory images
