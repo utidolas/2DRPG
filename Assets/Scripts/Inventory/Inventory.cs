@@ -129,6 +129,16 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
+    // public method to decrease item stack when crafting
+    public void ConsumeItem(string itemID)
+    {
+        List<int> indexes = CheckItemStockIndexes(itemID);
+        if (indexes.Count > 0) // check if we have at least 1 item
+        {
+            DecreaseItemStack(indexes[^1]); // consume last item in inv, " ^1 == [indexes.Count  - 1] "
+        }
+    }
+
     private List<int> CheckItemStockIndexes(string itemID)
     {
         // check if have the same item in inv

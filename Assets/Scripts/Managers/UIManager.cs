@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject npcQuestPanel;
     [SerializeField] private GameObject playerQuestPanel;
     [SerializeField] private GameObject shopPanel;
+    [SerializeField] private GameObject craftingPanel;
 
     private void Update()
     {
@@ -66,7 +67,12 @@ public class UIManager : MonoBehaviour
     public void OpenCloseShopPanel(bool value)
     {
         shopPanel.SetActive(value);
-    }   
+    }
+    
+    public void OpenClosePlayerCraftingPanel(bool value)
+    {
+        craftingPanel.SetActive(value);
+    }
 
     private void UpdatePlayerUI()
     {
@@ -117,6 +123,9 @@ public class UIManager : MonoBehaviour
                 break;
             case InteractionType.Shop:
                 OpenCloseShopPanel(true);
+                break;
+            case InteractionType.Crafting:
+                OpenClosePlayerCraftingPanel(true);
                 break;
         }
     }
