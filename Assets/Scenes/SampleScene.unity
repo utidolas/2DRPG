@@ -709,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeCardPrefab: {fileID: 6936804484866354630, guid: 3b55780d24b86c843882bc3589842a86, type: 3}
   recipeContainer: {fileID: 845836765}
+  recipeMaterialsPanel: {fileID: 1994982591}
   recipeName: {fileID: 475359477}
   item1Icon: {fileID: 1040564064}
   item1Name: {fileID: 291667672}
@@ -14380,7 +14381,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000015258789, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &845836766
 MonoBehaviour:
@@ -15986,7 +15987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &975637985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78347,7 +78348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1855527422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 29080696}
+        m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+        m_MethodName: CraftItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1855527422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80021,7 +80034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994982592}
   m_Layer: 5
-  m_Name: RecipeMaterials
+  m_Name: RecipeMaterialsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

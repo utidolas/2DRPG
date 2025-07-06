@@ -187,7 +187,8 @@ public class Inventory : Singleton<Inventory>
 
     private InventoryItem ItemExistisInGameContent(string itemID)
     {
-        for (int i = 0; i < inventorySize; i++)
+        // loop through all items in gameContent
+        for (int i = 0; i < gameContent.GameItems.Length; i++)
         {
             if (gameContent.GameItems[i].ID == itemID)
             {
@@ -207,6 +208,7 @@ public class Inventory : Singleton<Inventory>
             {
                 if (loadData.ItemContent[i] != null)
                 {
+                    // check if item exists in game content SO
                     InventoryItem itemFromContent = ItemExistisInGameContent(loadData.ItemContent[i]);
                     if(itemFromContent != null)
                     {

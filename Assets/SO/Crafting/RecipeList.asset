@@ -16,14 +16,14 @@ MonoBehaviour:
   - Name: Medi Pack
     Ingredient1: {fileID: 11400000, guid: b1662e5e026141e4eb4b44ae3a18e9d4, type: 2}
     Ingredient1Amount: 5
-    Ingredient2: {fileID: 11400000, guid: 62bf08651f2f57c47b4c648f8c32701c, type: 2}
+    Ingredient2: {fileID: 11400000, guid: 1510f9695f4db7b49b3edcf0fe94197b, type: 2}
     Ingredient2Amount: 3
     FinalItem: {fileID: 11400000, guid: 26623060d484705488234d91622d7e46, type: 2}
     FinalItemAmount: 2
   - Name: Milk Potion
     Ingredient1: {fileID: 11400000, guid: b1662e5e026141e4eb4b44ae3a18e9d4, type: 2}
     Ingredient1Amount: 2
-    Ingredient2: {fileID: 11400000, guid: 536f983f94f4f984e9fe1945415d27b2, type: 2}
+    Ingredient2: {fileID: 11400000, guid: 36bc477ac5023ca4a855daf8d69e1ee0, type: 2}
     Ingredient2Amount: 4
     FinalItem: {fileID: 11400000, guid: 47d727a261f42504495e659826c1ecdd, type: 2}
     FinalItemAmount: 5
