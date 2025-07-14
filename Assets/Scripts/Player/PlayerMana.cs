@@ -14,10 +14,12 @@ public class PlayerMana : MonoBehaviour
 
     private void Update()
     {
+        /* Debugging purposes
         if (Input.GetKeyDown(KeyCode.M))
         {
             UseMana(15f);
         }
+        */
     }
 
     public void UseMana(float amount)

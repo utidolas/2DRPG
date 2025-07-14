@@ -13,7 +13,7 @@ public class Inventory : Singleton<Inventory>
     [SerializeField] private InventoryItem[] inventoryItems; // items to be saved inside inventory
 
     [Header("Testing")]
-    public InventoryItem testItem;
+    //public InventoryItem testItem; // item to test adding to inventory
 
     public int InventorySize => inventorySize; // prop to get inventorySize value
     public InventoryItem[] InventoryItems => inventoryItems;
@@ -25,14 +25,17 @@ public class Inventory : Singleton<Inventory>
         inventoryItems = new InventoryItem[inventorySize];
         VerifyItemsForDraw();
         LoadInventory();
+        // SaveGame.Delete(INVENTORY_KEY_DATA); // delete inventory data for testing purposes
     }
 
     private void Update()
     {
+        /* Debugging purposes
         if (Input.GetKeyDown(KeyCode.H))
         {
             AddItem(testItem, 1);
         }
+        */
     }
 
     // add item to inv

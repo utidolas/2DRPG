@@ -18,10 +18,12 @@ public class PlayerExp : MonoBehaviour
     }
     private void Update()
     {
+        /* Debugging purposes
         if(Input.GetKeyDown(KeyCode.X)) 
         {
             AddExp(300f);
         }
+        */
     }
 
     private void NextLevel()

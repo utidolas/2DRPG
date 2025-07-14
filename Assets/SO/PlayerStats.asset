@@ -17,7 +17,7 @@ MonoBehaviour:
   MaxHealth: 100
   Mana: 150
   MaxMana: 150
-  CurrentExp: 40
+  CurrentExp: 0
   NextLevelExp: 100
   InitialNextLevelExp: 100
   ExpMultipliyer: 50

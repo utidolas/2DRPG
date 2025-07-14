@@ -76040,7 +76040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c3f3200ca9bb4692f5a5eeea8c5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsTest: 10000
+  coinsTest: 0
 --- !u!1001 &1673837957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78246,7 +78246,6 @@ MonoBehaviour:
   gameContent: {fileID: 11400000, guid: 343bf7699cabb5248bf0dd3a33f9d0f3, type: 2}
   inventorySize: 24
   inventoryItems: []
-  testItem: {fileID: 11400000, guid: 6e6a04da34ecf57459a4efe834ed2e9b, type: 2}
 --- !u!114 &1854685485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81602,6 +81601,74 @@ PrefabInstance:
       propertyPath: expDrop
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 41ad8e80faab48e498aaff953a900c2f, type: 2}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd27e659debfa284ea1d1b2906617725, type: 2}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Pickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: e40cf16719e538047838794a9c651103, type: 2}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Beaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 27c9c9fd8224ac3499a6bec1e9be40ee, type: 2}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2897803011356492982, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8483752753398769328, guid: 9dd10d9ccf9ea2d47adbd6ae5fb1f635, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6157074
@@ -82118,6 +82185,74 @@ PrefabInstance:
     - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
       propertyPath: expDrop
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 54e0bf869ed91c748a795eb4ed6fdff0, type: 2}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Weapon Wand
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 26623060d484705488234d91622d7e46, type: 2}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Med Kit
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 27c9c9fd8224ac3499a6bec1e9be40ee, type: 2}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 536f983f94f4f984e9fe1945415d27b2, type: 2}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Tea Leaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 363283937082843191, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 975829697343418315, guid: b26df33be3463ea4b940500bd86f8ef1, type: 3}
       propertyPath: m_Name
@@ -82637,6 +82772,74 @@ PrefabInstance:
       propertyPath: expDrop
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e6a04da34ecf57459a4efe834ed2e9b, type: 2}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ad7f02389c1b3c4482edf10eaea1f42, type: 2}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: d06bab1c959af9e4980c7dc9c07d0fe9, type: 2}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 27c9c9fd8224ac3499a6bec1e9be40ee, type: 2}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778187642957473661, guid: 5815c004048dd5b4490b249406241edc, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3520006024734117133, guid: 5815c004048dd5b4490b249406241edc, type: 3}
       propertyPath: m_Name
       value: EnemyReptile
@@ -83110,6 +83313,74 @@ PrefabInstance:
     - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
       propertyPath: expDrop
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[0].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 54e0bf869ed91c748a795eb4ed6fdff0, type: 2}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[0].Name
+      value: Weapon Wand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 26623060d484705488234d91622d7e46, type: 2}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[1].Name
+      value: Med Kit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[2].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 27c9c9fd8224ac3499a6bec1e9be40ee, type: 2}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[2].Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[3].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 536f983f94f4f984e9fe1945415d27b2, type: 2}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[3].Name
+      value: Tea Leaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[0].Quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[1].Quantity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[2].Quantity
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[3].Quantity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[0].DropChance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[1].DropChance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[2].DropChance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287047359518643892, guid: 1fa45ca55c10380488f2633849b53ac1, type: 3}
+      propertyPath: dropItems.Array.data[3].DropChance
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

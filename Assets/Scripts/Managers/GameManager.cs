@@ -10,10 +10,12 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
+        /* Debugging purposes
         if(Input.GetKeyDown(KeyCode.R)) 
         { 
             player.ResetPlayer();
         }
+        */
     }
 
     public void AddPlayerExp(float expAmount)

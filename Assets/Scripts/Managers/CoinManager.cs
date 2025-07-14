@@ -11,6 +11,7 @@ public class CoinManager : Singleton<CoinManager>
     private void Start()
     {
         Coins = SaveGame.Load(COIN_KEY, coinsTest);
+        // SaveGame.Delete(COIN_KEY); // delete coins data for testing purposes
     }
 
     public void AddCoins(float amount)
