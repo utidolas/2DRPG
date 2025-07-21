@@ -18,14 +18,14 @@ public class Inventory : Singleton<Inventory>
     public int InventorySize => inventorySize; // prop to get inventorySize value
     public InventoryItem[] InventoryItems => inventoryItems;
 
-    private readonly string INVENTORY_KEY_DATA = "MY_INVENTORY";
+    private readonly string INVENTORY_KEY_DATA = "MY_INVENTORY_PREFS";
 
     public void Start()
     {
         inventoryItems = new InventoryItem[inventorySize];
         VerifyItemsForDraw();
         LoadInventory();
-        // SaveGame.Delete(INVENTORY_KEY_DATA); // delete inventory data for testing purposes
+        SaveGame.Delete(INVENTORY_KEY_DATA); // delete inventory data for testing purposes
     }
 
     private void Update()
@@ -42,6 +42,11 @@ public class Inventory : Singleton<Inventory>
     public void AddItem(InventoryItem item, int quantity)
     {
         if (item == null || quantity <= 0) return;
+        if (item.ID == "ItemCoin")
+        {
+            CoinManager.Instance.AddCoins(quantity); // if item is coin, add coins to CoinManager
+            return; // if item is coin, don't add it to inventory
+        }
         List<int> itemIndexes = CheckItemStockIndexes(item.ID);
         if(item.IsStackable && itemIndexes.Count > 0) // if we have same item in inv
         {
@@ -206,6 +211,7 @@ public class Inventory : Singleton<Inventory>
     {
         if (SaveGame.Exists(INVENTORY_KEY_DATA))
         {
+            Debug.Log("Loading inventory data..."); // FOR TESTING PURPOSES
             InventoryData loadData = SaveGame.Load<InventoryData>(INVENTORY_KEY_DATA);
             for (int i = 0; i < inventorySize; i++)
             {

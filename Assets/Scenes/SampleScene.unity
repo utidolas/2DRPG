@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 671c45858b5559247a83cc93a89a7660, type: 2}
   m_sharedMaterial: {fileID: -5920154114919826857, guid: 671c45858b5559247a83cc93a89a7660, type: 2}
@@ -74009,9 +74009,12 @@ MonoBehaviour:
   - Name: Health Potion
     Item: {fileID: 11400000, guid: b1662e5e026141e4eb4b44ae3a18e9d4, type: 2}
     Cost: 10
+  - Name: Mana Potion
+    Item: {fileID: 11400000, guid: 6d7ac62ce6ab7174d988ea4dbf4d2292, type: 2}
+    Cost: 8
   - Name: Stick
     Item: {fileID: 11400000, guid: ba1e1ae48fe4562489b432dd401d9ddd, type: 2}
-    Cost: 200
+    Cost: 150
 --- !u!1 &1538403914
 GameObject:
   m_ObjectHideFlags: 0
@@ -74699,7 +74702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 671c45858b5559247a83cc93a89a7660, type: 2}
   m_sharedMaterial: {fileID: -5920154114919826857, guid: 671c45858b5559247a83cc93a89a7660, type: 2}
@@ -82962,7 +82965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
       propertyPath: dropItems.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
       propertyPath: dropItems.Array.data[0].Item
@@ -83005,6 +83008,14 @@ PrefabInstance:
       value: Onigiri x2 - 60%
       objectReference: {fileID: 0}
     - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
+      propertyPath: dropItems.Array.data[5].Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 27c9c9fd8224ac3499a6bec1e9be40ee, type: 2}
+    - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
+      propertyPath: dropItems.Array.data[5].Name
+      value: Coins x100 - 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
       propertyPath: dropItems.Array.data[0].Quantity
       value: 5
       objectReference: {fileID: 0}
@@ -83025,6 +83036,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
+      propertyPath: dropItems.Array.data[5].Quantity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
       propertyPath: dropItems.Array.data[0].DropChance
       value: 100
       objectReference: {fileID: 0}
@@ -83043,6 +83058,10 @@ PrefabInstance:
     - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
       propertyPath: dropItems.Array.data[4].DropChance
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856290374421667767, guid: 7078f483941fe5f4fa31815440cc2321, type: 3}
+      propertyPath: dropItems.Array.data[5].DropChance
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

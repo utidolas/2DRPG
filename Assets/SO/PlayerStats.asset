@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   Level: 1
-  Health: 100
+  Health: 40
   MaxHealth: 100
-  Mana: 150
+  Mana: 75
   MaxMana: 150
-  CurrentExp: 0
+  CurrentExp: 20
   NextLevelExp: 100
   InitialNextLevelExp: 100
   ExpMultipliyer: 50
@@ -28,5 +28,5 @@ MonoBehaviour:
   Dexterity: 0
   Intelligence: 0
   AttributePoints: 0
-  TotalExp: 40
+  TotalExp: 20
   TotalDamage: 22

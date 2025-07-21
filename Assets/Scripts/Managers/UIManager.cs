@@ -114,6 +114,7 @@ public class UIManager : MonoBehaviour
         UpdateStatsPanel();
     }
 
+    // callback for extra interaction events in DialogueManager
     private void ExtraInteractionCallback(InteractionType type)
     {
         switch (type)

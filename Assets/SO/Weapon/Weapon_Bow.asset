@@ -16,4 +16,4 @@ MonoBehaviour:
   WeaponType: 0
   Damage: 10
   ProjectilePrefab: {fileID: 8311941730891218589, guid: 02f9ccda1e5095d4b81c989060c5d25c, type: 3}
-  RequiredMana: 8
+  RequiredMana: 5
